@@ -1,7 +1,7 @@
 import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
-import "./assets/colors.less";
+import "./assets/css/colors.less";
 
 Vue.config.productionTip = false;
 

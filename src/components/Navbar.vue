@@ -15,14 +15,20 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <router-link class="nav-item nav-link nav-button" :click="changePage('home')" to="/">Home</router-link>
+          <router-link
+            class="nav-item nav-link nav-button"
+            :click="changePage('home')"
+            to="/"
+            >Home</router-link
+          >
           <a class="nav-item nav-link nav-button" href="#">Work</a>
           <a class="nav-item nav-link nav-button" href="#">Projects</a>
           <router-link
             class="nav-item nav-link nav-button"
-            :class="{active: isHobbyPage}"
+            :class="{ active: isHobbyPage }"
             to="/hobbies"
-          >Hobbies</router-link>
+            >Hobbies</router-link
+          >
         </div>
       </div>
     </nav>
@@ -44,7 +50,7 @@ export default {
 };
 </script>
 <style lang="less">
-@import "../assets/colors";
+@import "../assets/css/colors";
 .nav-custom {
   background-color: @navbar-background;
   color: @main-text;

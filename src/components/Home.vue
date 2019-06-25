@@ -1,10 +1,9 @@
 <template>
   <div>
-    <img src="../assets/jeff.png" class="img-fluid" alt="picture of jeff">
+    <img src="../assets/jeff.png" class="img-fluid" alt="picture of jeff" />
   </div>
 </template>
-<script>
-</script>
+<script></script>
 <style>
 .img-fluid {
   height: 300px;

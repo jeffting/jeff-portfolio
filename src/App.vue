@@ -5,10 +5,11 @@
 </template>
 
 <style lang="less">
-@import "./assets/colors";
+@import "./assets/css/colors";
 body {
   background-color: @main-background-color !important;
 }
+
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
