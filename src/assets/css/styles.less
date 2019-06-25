@@ -1,0 +1,39 @@
+@import "./colors.less";
+
+body.dark {
+    background-color: @main-background-color-dark  !important;
+
+    .text {
+        color: @main-text-dark;
+    }
+
+    .nav-custom {
+        background-color: @navbar-background-dark;
+        .text;
+    }
+
+    .nav-button {
+        &:hover {
+            background-color: @navbar-hover-color-dark;
+        }
+    }
+}
+
+body.light {
+    background-color: @main-background-color-light  !important;
+
+    .text {
+        color: @main-text-light;
+    }
+
+    .nav-custom {
+        background-color: @navbar-background-light;
+        color: @nav-text-light;
+    }
+
+    .nav-button {
+        &:hover {
+            background-color: @navbar-hover-color-light;
+        }
+    }
+}

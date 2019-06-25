@@ -1,12 +1,19 @@
 <template>
   <div>
-    <img src="../assets/jeff.png" class="img-fluid" alt="picture of jeff" />
+    <img src="../assets/jeff.png" class="img-fluid" alt="picture of jeff">
+    <div class="text-div text">Thank you for visiting my page</div>
   </div>
 </template>
 <script></script>
-<style>
+<style lang="less">
+@import "../assets/css/styles";
+
 .img-fluid {
   height: 300px;
+  float: left;
+}
+.text-div {
+  font-size: 50px;
 }
 @media (max-width: 1000px) {
   .img-fluid {
