@@ -4,9 +4,17 @@
     <h2 class="text title-header">Thanks for visiting my page!</h2>
     <div class="text">
       My name is Jeff Tingey. I am a software developer, studying Computer Science at Brigham Young University.
-      <br>Please explore my page or view my resume!
+      <br />Please explore my page, view my resume, and visit my profiles on LinkedIn and GitHub!
     </div>
-    <button v-on:click="openPdf">Resume</button>
+    <div class="profile-flex-container d-flex justify-content-around">
+      <button type="button" class="btn btn-info">View Resume</button>
+      <a href="https://www.linkedin.com/in/jeff-tingey/" target="_blank">
+        <img class="profile-image" src="../assets/images/linkedin.png" />
+      </a>
+      <a href="https://github.com/jeffting?tab=repositories" target="_blank">
+        <img class="profile-image" src="../assets/images/github.png" />
+      </a>
+    </div>
   </div>
 </template>
 <script>
@@ -23,14 +31,17 @@ export default {
 </script>
 <style lang="less">
 @import "../assets/css/styles";
+.profile-flex-container {
+  margin-top: 50px;
+}
 .title-header {
   margin-top: 50px;
 }
 .hooper {
   height: auto;
 }
-.img-fluid {
-  height: 300px;
+.profile-image {
+  max-height: 50px;
 }
 .text-div {
   font-size: 50px;

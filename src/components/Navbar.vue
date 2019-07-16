@@ -16,7 +16,11 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <router-link class="nav-item nav-link nav-button" :click="changePage('home')" to="/">Home</router-link>
-          <a class="nav-item nav-link nav-button" href="#">Work</a>
+          <router-link
+            class="nav-item nav-link nav-button"
+            :click="changePage('work')"
+            to="/work"
+          >Work</router-link>
           <a class="nav-item nav-link nav-button" href="#">Projects</a>
           <router-link
             class="nav-item nav-link nav-button"
@@ -27,7 +31,7 @@
       </div>
       <div class="test">Dark Mode</div>
       <label class="switch">
-        <input id="dark-mode-button" v-on:click="setDarkMode" type="checkbox">
+        <input id="dark-mode-button" v-on:click="setDarkMode" type="checkbox" />
         <span class="slider round"></span>
       </label>
     </nav>
@@ -54,6 +58,7 @@ export default {
   methods: {
     changePage(page) {
       this.page = page;
+      console.log(this.page);
     },
     setDarkMode() {
       this.isDarkMode = !this.isDarkMode;
@@ -79,7 +84,6 @@ export default {
 };
 </script>
 <style lang="less">
-// @import "../assets/css/colors";
 @import "../assets/css/styles";
 .nav-custom {
   padding: 0px;

@@ -3,6 +3,7 @@
     <navbar page="hobbies"></navbar>
     <home v-if="page === 'home'"></home>
     <hobbies v-if="page === 'hobbies'"></hobbies>
+    <work v-if="page === 'work'"></work>
   </div>
 </template>
 
@@ -10,6 +11,7 @@
 import Navbar from "./Navbar";
 import Home from "./Home";
 import Hobbies from "./Hobbies";
+import Work from "./Work";
 
 export default {
   data() {
@@ -18,7 +20,8 @@ export default {
   components: {
     Navbar,
     Home,
-    Hobbies
+    Hobbies,
+    Work
   },
   props: ["page"],
   created() {

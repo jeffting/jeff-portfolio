@@ -9,6 +9,9 @@ body.dark {
 
     .nav-custom {
         background-color: @navbar-background-dark;
+        -webkit-box-shadow: 0px 1px 15px 4px rgba(0, 0, 0, 0.25);
+        -moz-box-shadow: 0px 1px 15px 4px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 1px 15px 4px rgba(0, 0, 0, 0.25);
         .text;
     }
 
@@ -16,6 +19,23 @@ body.dark {
         &:hover {
             background-color: @navbar-hover-color-dark;
         }
+    }
+
+    .work-header {
+        background-color: @work-header-bg-dark;
+        padding: 25px;
+        border-radius: 5px;
+        margin-top: 20px;
+        font-size: 25px;
+        .text;
+        -webkit-box-shadow: 4px 1px 15px 4px rgba(0, 0, 0, 0.25);
+        -moz-box-shadow: 4px 1px 15px 4px rgba(0, 0, 0, 0.25);
+        box-shadow: 4px 1px 15px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .collapse-content {
+        background-color: @navbar-background-dark;
+        .text;
     }
 }
 
@@ -29,11 +49,26 @@ body.light {
     .nav-custom {
         background-color: @navbar-background-light;
         color: @nav-text-light;
+        -webkit-box-shadow: 0px 1px 15px 4px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0px 1px 15px 4px rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 1px 15px 4px rgba(0, 0, 0, 0.5);
     }
 
     .nav-button {
         &:hover {
             background-color: @navbar-hover-color-light;
         }
+    }
+
+    .work-header {
+        background-color: @work-header-bg-light;
+        padding: 25px;
+        border-radius: 5px;
+        margin-top: 20px;
+        font-size: 25px;
+        color: @nav-text-light;
+        -webkit-box-shadow: 4px 4px 13px 0px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 4px 4px 13px 0px rgba(0, 0, 0, 0.5);
+        box-shadow: 4px 4px 13px 0px rgba(0, 0, 0, 0.5);
     }
 }
