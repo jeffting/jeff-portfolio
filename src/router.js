@@ -25,14 +25,14 @@ export default new Router({
       props: {
         page: "hobbies"
       }
-    },
-    {
-      path: "/work",
-      name: "Work",
-      component: Main,
-      props: {
-        page: "work"
-      }
     }
+    // {
+    //   path: "/work",
+    //   name: "Work",
+    //   component: Main,
+    //   props: {
+    //     page: "work"
+    //   }
+    // }
   ]
 });

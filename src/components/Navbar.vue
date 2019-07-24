@@ -16,12 +16,12 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <router-link class="nav-item nav-link nav-button" :click="changePage('home')" to="/">Home</router-link>
-          <router-link
+          <a class="nav-item nav-link nav-button" href="#">Projects</a>
+          <!-- <router-link
             class="nav-item nav-link nav-button"
             :click="changePage('work')"
             to="/work"
-          >Work</router-link>
-          <a class="nav-item nav-link nav-button" href="#">Projects</a>
+          >Work</router-link>-->
           <router-link
             class="nav-item nav-link nav-button"
             :class="{ active: isHobbyPage }"
@@ -58,7 +58,7 @@ export default {
   methods: {
     changePage(page) {
       this.page = page;
-      console.log(this.page);
+      console.log(this.page, "here");
     },
     setDarkMode() {
       this.isDarkMode = !this.isDarkMode;

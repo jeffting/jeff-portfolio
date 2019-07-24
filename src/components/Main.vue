@@ -1,9 +1,9 @@
 <template>
   <div>
-    <navbar page="hobbies"></navbar>
+    <navbar :page="home"></navbar>
     <home v-if="page === 'home'"></home>
     <hobbies v-if="page === 'hobbies'"></hobbies>
-    <work v-if="page === 'work'"></work>
+    <!-- <work v-if="page === 'work'"></work> -->
   </div>
 </template>
 
