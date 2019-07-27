@@ -17,11 +17,7 @@
         <div class="navbar-nav">
           <router-link class="nav-item nav-link nav-button" :click="changePage('home')" to="/">Home</router-link>
           <a class="nav-item nav-link nav-button" href="#">Projects</a>
-          <!-- <router-link
-            class="nav-item nav-link nav-button"
-            :click="changePage('work')"
-            to="/work"
-          >Work</router-link>-->
+          <router-link to="/work" class="nav-item nav-link nav-button">Work</router-link>
           <router-link
             class="nav-item nav-link nav-button"
             :class="{ active: isHobbyPage }"
@@ -85,14 +81,17 @@ export default {
 </script>
 <style lang="less">
 @import "../assets/css/styles";
+div .navbar {
+  padding: 0px;
+}
 .nav-custom {
   padding: 0px;
 }
 .name {
   padding: 10px 5px 10px 20px;
 }
-.nav-button {
-  padding: 15px 0px 15px 0px;
+div .nav-link {
+  padding: 15px 8px 15px 8px;
 }
 .switch {
   position: relative;

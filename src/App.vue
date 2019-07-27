@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <navbar :page="'home'"></navbar>
     <router-view />
   </div>
 </template>
@@ -8,7 +9,12 @@ export default {
   mounted() {}
 };
 </script>
-
+<script>
+import Navbar from "./components/Navbar";
+export default {
+  components: { Navbar }
+};
+</script>
 <style lang="less">
 @import "./assets/css/styles";
 

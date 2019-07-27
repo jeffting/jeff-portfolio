@@ -3,7 +3,9 @@ import Router from "vue-router";
 import BootstrapVue from "bootstrap-vue";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
-import Main from "@/components/Main";
+import Home from "@/components/Home";
+import Hobbies from "@/components/Hobbies";
+import Work from "@/components/Work";
 
 Vue.use(Router);
 Vue.use(BootstrapVue);
@@ -12,27 +14,27 @@ export default new Router({
   routes: [
     {
       path: "/",
-      name: "Main",
-      component: Main,
+      name: "Home",
+      component: Home,
       props: {
         page: "home"
       }
     },
     {
       path: "/hobbies",
-      name: "Main",
-      component: Main,
+      name: "Hobbies",
+      component: Hobbies,
       props: {
         page: "hobbies"
       }
+    },
+    {
+      path: "/work",
+      name: "Work",
+      component: Work,
+      props: {
+        page: "work"
+      }
     }
-    // {
-    //   path: "/work",
-    //   name: "Work",
-    //   component: Main,
-    //   props: {
-    //     page: "work"
-    //   }
-    // }
   ]
 });
