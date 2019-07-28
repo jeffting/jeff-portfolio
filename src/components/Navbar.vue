@@ -1,7 +1,7 @@
 <template>
   <div>
     <nav class="navbar nav-custom navbar-dark navbar-expand-lg fixed-top">
-      <a class="navbar-brand name" href="#">Jeff Tingey</a>
+      <router-link class="navbar-brand name" to="/">Jeff Tingey</router-link>
       <button
         class="navbar-toggler"
         type="button"
@@ -15,7 +15,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <router-link class="nav-item nav-link nav-button" :click="changePage('home')" to="/">Home</router-link>
+          <router-link class="nav-item nav-link nav-button" to="/">Home</router-link>
           <a class="nav-item nav-link nav-button" href="#">Projects</a>
           <router-link to="/work" class="nav-item nav-link nav-button">Work</router-link>
           <router-link
@@ -52,10 +52,6 @@ export default {
     this.changeTheme();
   },
   methods: {
-    changePage(page) {
-      this.page = page;
-      console.log(this.page, "here");
-    },
     setDarkMode() {
       this.isDarkMode = !this.isDarkMode;
       this.changeTheme();

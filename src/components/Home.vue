@@ -2,7 +2,7 @@
   <div>
     <carousel></carousel>
     <h2 class="text title-header">Thanks for visiting my page!</h2>
-    <div class="text">
+    <div class="text body-text">
       My name is Jeff Tingey. I am a software developer, studying Computer Science at Brigham Young University.
       <br />Please explore my page, view my resume, and visit my profiles on LinkedIn and GitHub!
     </div>
@@ -33,6 +33,10 @@ export default {
 @import "../assets/css/styles";
 .profile-flex-container {
   margin-top: 50px;
+}
+.body-text {
+  font-size: 18px;
+  line-height: 2rem;
 }
 .title-header {
   margin-top: 50px;

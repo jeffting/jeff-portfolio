@@ -53,7 +53,7 @@ export default {
 img {
   height: 300px;
   width: auto;
-  border-radius: 15px;
+  border-radius: 5px;
 }
 @media (max-width: 750px) {
   img {
