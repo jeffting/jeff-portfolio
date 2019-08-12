@@ -16,7 +16,7 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <router-link class="nav-item nav-link nav-button" to="/">Home</router-link>
-          <a class="nav-item nav-link nav-button" href="#">Projects</a>
+          <router-link to="/projects" class="nav-item nav-link nav-button">Projects</router-link>
           <router-link to="/work" class="nav-item nav-link nav-button">Work</router-link>
           <router-link
             class="nav-item nav-link nav-button"
@@ -94,7 +94,7 @@ div .nav-link {
   display: inline-block;
   width: 30px;
   height: 17px;
-  margin-right: 10px;
+  margin: auto 10px auto 0px;
 }
 
 .switch input {

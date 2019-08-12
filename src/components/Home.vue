@@ -7,7 +7,12 @@
       <br />Please explore my page, view my resume, and visit my profiles on LinkedIn and GitHub!
     </div>
     <div class="profile-flex-container d-flex justify-content-around">
-      <button type="button" class="btn btn-info">View Resume</button>
+      <a
+        src="https://docs.google.com/document/d/1gkbo_TpktWB81DWgQOH0TUxiAv43ZsxIyz5MOBoQMtI/edit?usp=sharing"
+        target="_blank"
+      >
+        <button type="button" v-on:click="openPdf()" class="btn btn-info">View Resume</button>
+      </a>
       <a href="https://www.linkedin.com/in/jeff-tingey/" target="_blank">
         <img class="profile-image" src="../assets/images/linkedin.png" />
       </a>
@@ -23,8 +28,11 @@ export default {
   components: { Carousel },
   methods: {
     openPdf() {
-      // console.log("here");
-      window.open("../assets/nov14resume.pdf", "_blank", "fullscreen=yes");
+      console.log("here");
+      window.open(
+        "https://docs.google.com/document/d/1gkbo_TpktWB81DWgQOH0TUxiAv43ZsxIyz5MOBoQMtI/edit?usp=sharing",
+        "_blank"
+      );
     }
   }
 };

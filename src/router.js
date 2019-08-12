@@ -6,13 +6,13 @@ import "bootstrap-vue/dist/bootstrap-vue.css";
 import Home from "@/components/Home";
 import Hobbies from "@/components/Hobbies";
 import Work from "@/components/Work";
+import Projects from "@/components/Projects";
 
 Vue.use(Router);
 Vue.use(BootstrapVue);
 
 export default new Router({
-  routes: [
-    {
+  routes: [{
       path: "/",
       name: "Home",
       component: Home,
@@ -34,6 +34,14 @@ export default new Router({
       component: Work,
       props: {
         page: "work"
+      }
+    },
+    {
+      path: "/projects",
+      name: "Projects",
+      component: Projects,
+      props: {
+        page: "projects"
       }
     }
   ]
