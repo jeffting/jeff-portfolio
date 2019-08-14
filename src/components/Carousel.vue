@@ -57,7 +57,7 @@ img {
 }
 @media (max-width: 750px) {
   img {
-    height: 200px;
+    height: 160px;
   }
 }
 </style>

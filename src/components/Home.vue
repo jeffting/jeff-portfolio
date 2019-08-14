@@ -11,7 +11,7 @@
         src="https://docs.google.com/document/d/1gkbo_TpktWB81DWgQOH0TUxiAv43ZsxIyz5MOBoQMtI/edit?usp=sharing"
         target="_blank"
       >
-        <button type="button" v-on:click="openPdf()" class="btn btn-info">View Resume</button>
+        <button type="button" v-on:click="openPdf()" class="btn btn-info view-res">View Resume</button>
       </a>
       <a href="https://www.linkedin.com/in/jeff-tingey/" target="_blank">
         <img class="profile-image" src="../assets/images/linkedin.png" />
@@ -58,14 +58,12 @@ export default {
 .text-div {
   font-size: 50px;
 }
-@media (max-width: 1000px) {
-  .img-fluid {
-    height: 200px;
-  }
-}
 @media (max-width: 750px) {
-  .img-fluid {
-    height: 150px;
+  .profile-image {
+    max-height: 30px;
+  }
+  .view-res {
+    font-size: 12px;
   }
 }
 </style>

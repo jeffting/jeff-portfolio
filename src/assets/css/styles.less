@@ -37,6 +37,27 @@ body.dark {
         background-color: @navbar-background-dark;
         .text;
     }
+
+    .sidebar {
+        background-color: @main-background-color-dark;
+    }
+
+    .sidebar-item {
+        border-color: @navbar-hover-color-dark;
+    }
+
+    .top-sidebar-item {
+        border-color: @navbar-hover-color-dark;
+    }
+
+    .close-icon {
+        .text;
+
+        &:hover {
+            cursor: pointer;
+            color: @navbar-background-light;
+        }
+    }
 }
 
 body.light {
@@ -70,5 +91,26 @@ body.light {
         -webkit-box-shadow: 4px 4px 13px 0px rgba(0, 0, 0, 0.5);
         -moz-box-shadow: 4px 4px 13px 0px rgba(0, 0, 0, 0.5);
         box-shadow: 4px 4px 13px 0px rgba(0, 0, 0, 0.5);
+    }
+
+    .sidebar {
+        background-color: @main-background-color-light;
+    }
+
+    .sidebar-item {
+        border-color: @navbar-hover-color-light;
+    }
+
+    .top-sidebar-item {
+        border-color: @navbar-hover-color-light;
+    }
+
+    .close-icon {
+        .text;
+
+        &:hover {
+            cursor: pointer;
+            color: white;
+        }
     }
 }

@@ -2,6 +2,20 @@
   <div>
     <nav class="navbar nav-custom navbar-dark navbar-expand-lg fixed-top">
       <router-link class="navbar-brand name" to="/">Jeff Tingey</router-link>
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <router-link class="nav-item nav-link nav-button" to="/">Home</router-link>
+          <router-link to="/projects" class="nav-item nav-link nav-button">Projects</router-link>
+          <router-link to="/work" class="nav-item nav-link nav-button">Work</router-link>
+          <router-link class="nav-item nav-link nav-button" to="/hobbies">Hobbies</router-link>
+        </div>
+      </div>
+      <div class="darkmode-nav" style="font-size: 13px; margin-right: 5px;">Dark Mode</div>
+      <label class="switch darkmode-nav">
+        <input id="dark-mode-button" v-on:click="setDarkMode" type="checkbox" />
+        <span class="slider round"></span>
+      </label>
       <button
         class="navbar-toggler"
         type="button"
@@ -10,42 +24,32 @@
         aria-controls="navbarNavAltMarkup"
         aria-expanded="false"
         aria-label="Toggle navigation"
+        v-on:click="isSidebarOpen=true"
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <router-link class="nav-item nav-link nav-button" to="/">Home</router-link>
-          <router-link to="/projects" class="nav-item nav-link nav-button">Projects</router-link>
-          <router-link to="/work" class="nav-item nav-link nav-button">Work</router-link>
-          <router-link
-            class="nav-item nav-link nav-button"
-            :class="{ active: isHobbyPage }"
-            to="/hobbies"
-          >Hobbies</router-link>
-        </div>
-      </div>
-      <div class="test">Dark Mode</div>
-      <label class="switch">
-        <input id="dark-mode-button" v-on:click="setDarkMode" type="checkbox" />
-        <span class="slider round"></span>
-      </label>
     </nav>
+    <sidebar
+      :isDarkMode="isDarkMode"
+      @setDarkMode="setDarkMode"
+      @close="closeSidebar"
+      v-if="isSidebarOpen"
+    ></sidebar>
   </div>
 </template>
 <script>
 import saveState from "vue-save-state";
+import Sidebar from "./Sidebar";
 export default {
   props: ["page"],
-  computed: {
-    isHobbyPage() {
-      return this.page === "hobbies";
-    }
-  },
   data() {
     return {
-      isDarkMode: false
+      isDarkMode: false,
+      isSidebarOpen: false
     };
+  },
+  components: {
+    Sidebar
   },
   mixins: [saveState],
   mounted() {
@@ -71,6 +75,9 @@ export default {
         cacheKey: "Navbar",
         saveProperties: ["isDarkMode"]
       };
+    },
+    closeSidebar() {
+      this.isSidebarOpen = false;
     }
   }
 };
@@ -126,7 +133,9 @@ div .nav-link {
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
-
+.navbar-toggler {
+  margin: 7px 7px 7px 7px;
+}
 input:checked + .slider {
   background-color: #2196f3;
 }
@@ -151,5 +160,14 @@ input:checked + .slider:before {
 }
 label {
   margin-bottom: 0px;
+}
+
+@media (max-width: 992px) {
+  .nav-custom {
+    .darkmode-nav {
+      visibility: hidden;
+      width: 0px;
+    }
+  }
 }
 </style>
