@@ -29,12 +29,14 @@
         <span class="navbar-toggler-icon"></span>
       </button>
     </nav>
-    <sidebar
-      :isDarkMode="isDarkMode"
-      @setDarkMode="setDarkMode"
-      @close="closeSidebar"
-      v-if="isSidebarOpen"
-    ></sidebar>
+    <transition name="fade">
+      <sidebar
+        :isDarkMode="isDarkMode"
+        @setDarkMode="setDarkMode"
+        @close="closeSidebar"
+        v-if="isSidebarOpen"
+      ></sidebar>
+    </transition>
   </div>
 </template>
 <script>
@@ -84,6 +86,13 @@ export default {
 </script>
 <style lang="less">
 @import "../assets/css/styles";
+.fade-leave-active {
+  transition: opacity 0.1s ease-out;
+}
+
+.fade-leave-to {
+  opacity: 0;
+}
 div .navbar {
   padding: 0px;
 }

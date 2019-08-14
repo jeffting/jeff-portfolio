@@ -4,7 +4,7 @@
     <b-collapse class="mt-2" id="collapse-1" style="font-size: 18px;">
       <b-card class="collapse-content">
         <p>
-          I created this project the summer of 2019 as a portfolio website for employees to look at. It is created using Vue.js and bootstrap.
+          I created this project the summer of 2019 as a portfolio website for employers to look at. It is created using Vue.js and bootstrap.
           The app is deployed using heroku. View the GitHub repository
           <a
             href="https://github.com/jeffting/jeff-portfolio"
@@ -53,6 +53,7 @@
         </p>
       </b-card>
     </b-collapse>
+    <div style="height: 100px;"></div>
   </div>
 </template>
 <script>

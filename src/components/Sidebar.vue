@@ -39,7 +39,6 @@
 export default {
   props: ["isDarkMode"],
   mounted() {
-    console.log(this.isDarkMode);
     if (this.isDarkMode) {
       document.getElementById("dark-mode-side-button").checked = true;
     }
@@ -56,18 +55,40 @@ export default {
 </script>
 <style lang="less">
 @import "../assets/css/styles";
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes mymove {
+  from {
+    right: 0px;
+  }
+  to {
+    right: 200px;
+  }
+}
+
+/* Standard syntax */
+@keyframes mymove {
+  from {
+    right: -350px;
+  }
+  to {
+    right: 0px;
+  }
+}
 .sidebar {
   position: fixed;
   width: 50%;
-  max-width: 300px;
+  max-width: 400px;
+  min-width: 250px;
   background-color: white;
-  height: 100%;
+  height: 120%;
   right: 0;
   top: 0;
   z-index: 1032;
   -webkit-box-shadow: 0px 0px 22px -4px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 22px -4px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 22px -4px rgba(0, 0, 0, 0.75);
+  -webkit-animation: mymove 0.5s; /* Safari 4.0 - 8.0 */
+  animation: mymove 0.5s;
   .sidebar-item {
     font-size: 20px;
     border-bottom: solid;
@@ -92,7 +113,7 @@ export default {
   right: 0;
   top: 0;
   width: 100%;
-  height: 100%;
+  height: 120%;
   background-color: #000;
   opacity: 0.7;
   z-index: 1031;

@@ -20,6 +20,7 @@
         <img class="profile-image" src="../assets/images/github.png" />
       </a>
     </div>
+    <div style="height: 100px;"></div>
   </div>
 </template>
 <script>
@@ -28,7 +29,6 @@ export default {
   components: { Carousel },
   methods: {
     openPdf() {
-      console.log("here");
       window.open(
         "https://docs.google.com/document/d/1gkbo_TpktWB81DWgQOH0TUxiAv43ZsxIyz5MOBoQMtI/edit?usp=sharing",
         "_blank"

@@ -13,9 +13,11 @@
           Over the course of the 11 week internship, we completed 2 projects from the ground up. The first being Segmentation UI, which was the focus of
           the first 2 weeks. Second, was CPD Inspector, which we worked on the remaining 9 weeks.
         </p>
-        <p>Segmentation UI</p>
+        <p>
+          <u>Segmentation UI</u>
+        </p>
         <p style="margin-top: -15px;">
-          The basis of Segmentation UI was to reduce the work done by internal employees to convert "segments", data about clients,
+          The basis of Segmentation UI was to reduce the work done by internal employees to convert "segments", data about clients money portfolio,
           into JSON, and store it in the database. Previously, employees were entering the data into an excel spreadsheet, one by one, and constructing
           JSON using complicated excel formulas. We created Segmentation UI which automatically parses a csv into the correct JSON format, then submits it to the database utilizing
           existing apis.
@@ -25,7 +27,9 @@
           <br />Specifically, I worked on hooking up the service layer to perform CRUD operations using the apis that Clearwater had already created. Also, I set up
           nginx for our project. I contributed to the UI, and set up the delete functionality among other things.
         </p>
-        <p>CPD Inspector</p>
+        <p>
+          <u>CPD Inspector</u>
+        </p>
         <p style="margin-top: -15px;">
           This was a much bigger project. I will give some background to explain why it is needed. Often times
           clients are missing data fields on their money reports. They then call Clearwater wondering why a certain data field isn't showing up.
@@ -41,7 +45,7 @@
         </p>
         <div class="d-flex justify-content-end">
           <img
-            style="width: 30%;"
+            style="width: 30%; min-width: 100px;"
             src="https://media1.fdncms.com/boiseweekly/imager/u/mobilestory/4781654/clearwater_analytics.png"
           />
         </div>
@@ -63,7 +67,7 @@
         <a href="https://www.byutv.org" target="_blank">byutv.org</a>.
         <div class="d-flex justify-content-end">
           <img
-            style="width: 15%; border-radius: 10px;"
+            style="width: 15%; min-width: 75px; border-radius: 10px;"
             src="https://www.byutv.org/content/png-logos/byutv/app/square/1280x720.png"
           />
         </div>
