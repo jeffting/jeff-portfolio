@@ -92,7 +92,12 @@
   </div>
 </template>
 <script>
-export default {};
+export default {
+  created() {
+    this.$setPage("work");
+    window.page = "work";
+  }
+};
 </script>
 <style lang="less">
 @import "../assets/css/styles";

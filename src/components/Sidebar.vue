@@ -5,23 +5,27 @@
       <div class="sidebar-list">
         <router-link
           v-on:click.native="closeSidebar()"
-          class="nav-item text nav-link nav-button sidebar-item top-sidebar-item"
+          :class="{ selected: this.pageName === 'home', 'nav-button': this.pageName !== 'home'}"
+          class="nav-item text nav-link sidebar-item top-sidebar-item"
           to="/"
         >Home</router-link>
         <router-link
           v-on:click.native="closeSidebar()"
           to="/projects"
-          class="nav-item text nav-link sidebar-item nav-button"
+          :class="{ selected: this.pageName === 'projects', 'nav-button': this.pageName !== 'projects'}"
+          class="nav-item text nav-link sidebar-item"
         >Projects</router-link>
         <router-link
           v-on:click.native="closeSidebar()"
           to="/work"
-          class="nav-item nav-link text nav-button sidebar-item"
+          :class="{ selected: this.pageName === 'work', 'nav-button': this.pageName !== 'work'}"
+          class="nav-item nav-link text sidebar-item"
         >Work</router-link>
         <router-link
           v-on:click.native="closeSidebar()"
           to="/hobbies"
-          class="nav-item nav-link text nav-button sidebar-item"
+          :class="{ selected: this.pageName === 'hobbies', 'nav-button': this.pageName !== 'hobbies'}"
+          class="nav-item nav-link text sidebar-item"
         >Hobbies</router-link>
         <div class="d-flex justify-content-center darkmode-div">
           <div class="darkmode-nav text" style="font-size: 13px; margin-right: 5px;">Dark Mode</div>
@@ -38,14 +42,22 @@
 <script>
 export default {
   props: ["isDarkMode"],
+  data() {
+    return {
+      pageName: null
+    };
+  },
   mounted() {
     if (this.isDarkMode) {
       document.getElementById("dark-mode-side-button").checked = true;
     }
+    this.pageName = this.$page;
   },
   methods: {
     closeSidebar() {
       this.$emit("close");
+      this.pageName = this.$page;
+      this.$emit("setPageName");
     },
     setDarkMode() {
       this.$emit("setDarkMode");

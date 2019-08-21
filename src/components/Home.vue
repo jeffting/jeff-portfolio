@@ -27,6 +27,10 @@
 import Carousel from "./Carousel";
 export default {
   components: { Carousel },
+  created() {
+    window.page = "home";
+    this.$setPage("home");
+  },
   methods: {
     openPdf() {
       window.open(

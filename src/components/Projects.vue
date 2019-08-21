@@ -57,7 +57,11 @@
   </div>
 </template>
 <script>
-export default {};
+export default {
+  created() {
+    this.$setPage("projects");
+  }
+};
 </script>
 <style lang="less">
 @import "../assets/css/styles";

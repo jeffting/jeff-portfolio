@@ -5,10 +5,34 @@
 
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <router-link class="nav-item nav-link nav-button" to="/">Home</router-link>
-          <router-link to="/projects" class="nav-item nav-link nav-button">Projects</router-link>
-          <router-link to="/work" class="nav-item nav-link nav-button">Work</router-link>
-          <router-link class="nav-item nav-link nav-button" to="/hobbies">Hobbies</router-link>
+          <span v-on:click="setPageName()">
+            <router-link
+              :class="{ selected: this.pageName === 'home', 'nav-button': this.pageName !== 'home'}"
+              class="nav-item nav-link"
+              to="/"
+            >Home</router-link>
+          </span>
+          <span v-on:click="setPageName()">
+            <router-link
+              to="/projects"
+              :class="{ selected: this.pageName === 'projects', 'nav-button': this.pageName !== 'projects'}"
+              class="nav-item nav-link"
+            >Projects</router-link>
+          </span>
+          <span v-on:click="setPageName()">
+            <router-link
+              to="/work"
+              :class="{ selected: this.pageName === 'work', 'nav-button': this.pageName !== 'work'}"
+              class="nav-item nav-link"
+            >Work</router-link>
+          </span>
+          <span v-on:click="setPageName()">
+            <router-link
+              :class="{ selected: this.pageName === 'hobbies', 'nav-button': this.pageName !== 'hobbies'}"
+              class="nav-item nav-link"
+              to="/hobbies"
+            >Hobbies</router-link>
+          </span>
         </div>
       </div>
       <div class="darkmode-nav" style="font-size: 13px; margin-right: 5px;">Dark Mode</div>
@@ -34,6 +58,7 @@
         :isDarkMode="isDarkMode"
         @setDarkMode="setDarkMode"
         @close="closeSidebar"
+        @setPageName="setPageName"
         v-if="isSidebarOpen"
       ></sidebar>
     </transition>
@@ -47,7 +72,8 @@ export default {
   data() {
     return {
       isDarkMode: false,
-      isSidebarOpen: false
+      isSidebarOpen: false,
+      pageName: this.$page
     };
   },
   components: {
@@ -56,11 +82,15 @@ export default {
   mixins: [saveState],
   mounted() {
     this.changeTheme();
+    this.pageName = this.$page;
   },
   methods: {
     setDarkMode() {
       this.isDarkMode = !this.isDarkMode;
       this.changeTheme();
+    },
+    setPageName() {
+      this.pageName = this.$page;
     },
     changeTheme() {
       if (this.isDarkMode) {

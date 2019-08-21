@@ -26,7 +26,9 @@
 </template>
 <script>
 export default {
-  components: {}
+  created() {
+    this.$setPage("hobbies");
+  }
 };
 </script>
 <style lang="less">
